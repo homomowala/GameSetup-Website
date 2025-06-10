@@ -23,10 +23,7 @@
   <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
     <!-- Navbar -->
     <header class="flex justify-between items-center p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
-      <div class="flex items-center space-x-2">
-        <img src="/assets/logo.png" alt="GameSetup Logo" class="h-10 w-auto" />
-        <span class="text-2xl font-bold text-brand">GameSetup</span>
-      </div>
+      <span class="text-2xl font-bold text-brand">GameSetup</span>
       <nav class="hidden md:flex space-x-6 text-sm uppercase">
         <a href="index.html" class="hover:text-brand transition">Home</a>
         <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
@@ -38,35 +35,59 @@
       </nav>
     </header>
 
-    <!-- Hero -->
+    <!-- Mobile Nav -->
+    <nav class="md:hidden flex flex-wrap justify-center gap-4 text-sm uppercase py-4 bg-darker">
+      <a href="index.html" class="hover:text-brand transition">Home</a>
+      <a href="vps.html" class="hover:text-brand transition">VPS</a>
+      <a href="pterodactyl.html" class="text-brand font-semibold">Ptero</a>
+      <a href="bots.html" class="hover:text-brand transition">Bots</a>
+      <a href="hosting.html" class="hover:text-brand transition">Full</a>
+      <a href="websites.html" class="hover:text-brand transition">Web</a>
+      <a href="contact.html" class="hover:text-brand transition">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
     <section class="text-center pt-20 px-6">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Pterodactyl Panel Setup</h1>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto">We install and configure Pterodactyl with themes, extensions, and full support — start hosting your servers like a pro.</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Pterodactyl Setup</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+        Full game panel setup with modern design and powerful features — we handle everything for you.
+      </p>
     </section>
 
-    <!-- Setup Info -->
-    <section class="max-w-5xl mx-auto py-16 px-4 grid gap-10">
-      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
-        <h2 class="text-2xl font-semibold text-brand mb-2">✅ Full Installation</h2>
-        <p class="text-gray-300">We install Pterodactyl Panel from scratch including Wings, SSL, and all configs — on your own VPS or one we help you get.</p>
+    <!-- Features Section -->
+    <section class="max-w-4xl mx-auto py-16 px-6 space-y-6">
+      <div class="bg-dark border border-brand/30 rounded-xl p-6">
+        <h2 class="text-2xl font-bold text-brand mb-2">🛠️ What’s Included</h2>
+        <ul class="list-disc list-inside text-gray-300 space-y-1">
+          <li>✅ Pterodactyl Panel (v1.x latest)</li>
+          <li>✅ Full SSL, wings & daemon setup</li>
+          <li>✅ Nebula theme & addons (revamp style)</li>
+          <li>✅ Custom footer/logo, server icons</li>
+          <li>✅ Admin + User test accounts</li>
+          <li>✅ Free email SMTP (Gmail, MailerSend, etc.)</li>
+          <li>✅ Full backend security & port config</li>
+        </ul>
       </div>
-      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
-        <h2 class="text-2xl font-semibold text-brand mb-2">🎨 Nebula Theme + Addons</h2>
-        <p class="text-gray-300">We apply the Nebula UI theme and popular Pterodactyl addons (file manager, logs, themes, server packs, backups, and more).</p>
+
+      <div class="bg-dark border border-brand/30 rounded-xl p-6">
+        <h2 class="text-xl font-bold text-brand mb-2">🔌 VPS Requirements</h2>
+        <p class="text-gray-300">Ubuntu 20.04 / 22.04 | 1GB+ RAM | Root access (SSH)</p>
+        <p class="text-sm text-gray-500 mt-1">Need a VPS? We can help you get one too.</p>
       </div>
-      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
-        <h2 class="text-2xl font-semibold text-brand mb-2">⚙️ Server Requirements</h2>
-        <p class="text-gray-300">Minimum: 1GB RAM, 1 vCore, 10GB SSD VPS (we can provide VPS too if needed). Ubuntu 20.04/22.04 is supported.</p>
-      </div>
-      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
-        <h2 class="text-2xl font-semibold text-brand mb-2">🛠️ Includes VPS Help</h2>
-        <p class="text-gray-300">We help you with VPS setup, hostname config, DNS records, firewall rules, and panel management tips.</p>
+
+      <div class="bg-dark border border-brand/30 rounded-xl p-6">
+        <h2 class="text-xl font-bold text-brand mb-2">💸 Price Range</h2>
+        <p class="text-gray-300">৳999 – ৳2,499 (depending on theme and customizations)</p>
+        <p class="text-sm text-gray-500 mt-1">Ask us for a custom quote based on your needs.</p>
       </div>
     </section>
 
     <!-- CTA -->
     <div class="text-center pb-20">
-      <a href="https://discord.gg/cBhhAnzeks" target="_blank" class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition-all">Order Setup on Discord</a>
+      <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+         class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition-all">
+         Order Setup via Discord
+      </a>
     </div>
 
     <!-- Footer -->
