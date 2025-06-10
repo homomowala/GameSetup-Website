@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domains — GameSetup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff9c3f',
+              brandHover: '#ff7a1a',
+              dark: '#0b0b0b',
+              darker: '#1a1a1a',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
+    <!-- Navbar -->
+    <header class="flex justify-between items-center p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
+      <span class="text-2xl font-bold text-brand">GameSetup</span>
+      <nav class="hidden md:flex space-x-6 text-sm uppercase">
+        <a href="index.html" class="hover:text-brand transition">Home</a>
+        <a href="vps.html" class="hover:text-brand transition">VPS</a>
+        <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
+        <a href="bots.html" class="hover:text-brand transition">Bots</a>
+        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
+        <a href="websites.html" class="hover:text-brand transition">Websites</a>
+        <a href="domains.html" class="text-brand font-semibold">Domains</a>
+        <a href="contact.html" class="hover:text-brand transition">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Mobile Nav -->
+    <nav class="md:hidden flex flex-wrap justify-center gap-4 text-sm uppercase py-4 bg-darker">
+      <a href="index.html" class="hover:text-brand transition">Home</a>
+      <a href="vps.html" class="hover:text-brand transition">VPS</a>
+      <a href="pterodactyl.html" class="hover:text-brand transition">Ptero</a>
+      <a href="bots.html" class="hover:text-brand transition">Bots</a>
+      <a href="hosting.html" class="hover:text-brand transition">Full</a>
+      <a href="websites.html" class="hover:text-brand transition">Web</a>
+      <a href="domains.html" class="text-brand font-semibold">Domains</a>
+      <a href="contact.html" class="hover:text-brand transition">Contact</a>
+    </nav>
+
+    <!-- Title -->
+    <section class="text-center pt-20 px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Available Domains</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">Choose the perfect domain name for your brand or server.</p>
+    </section>
+
+    <!-- Domain List -->
+    <section class="max-w-4xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-6 text-sm">
+      <div>
+        <h2 class="text-xl font-bold text-brand mb-4">🌟 Premium</h2>
+        <ul class="space-y-2 text-gray-300">
+          <li>.com</li>
+          <li>.net</li>
+          <li>.gg</li>
+          <li>.cloud</li>
+          <li>.hosting</li>
+          <li>.server</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold text-brand mb-4">💸 Affordable</h2>
+        <ul class="space-y-2 text-gray-300">
+          <li>.xyz</li>
+          <li>.fun</li>
+          <li>.site</li>
+          <li>.tech</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold text-brand mb-4">🔁 Common</h2>
+        <ul class="space-y-2 text-gray-300">
+          <li>.cf</li>
+          <li>.ml</li>
+          <li>.ga</li>
+          <li>.tk</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold text-brand mb-4">🧩 Niche</h2>
+        <ul class="space-y-2 text-gray-300">
+          <li>.play</li>
+          <li>.dev</li>
+          <li>.space</li>
+          <li>.world</li>
+          <li>.mc</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="text-center pb-20">
+      <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+         class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition-all">
+         Order a Domain via Discord
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 py-6 border-t border-gray-800">
+      <p>&copy; 2025 GameSetup. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
