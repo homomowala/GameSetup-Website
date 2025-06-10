@@ -1,99 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pterodactyl Setup — GameSetup</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: '#ff9c3f',
-              brandHover: '#ff7a1a',
-              dark: '#0b0b0b',
-              darker: '#1a1a1a',
-            },
-          },
-        },
-      };
-    </script>
-  </head>
-  <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
-    <!-- Navbar -->
-    <header class="flex justify-between items-center p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
-      <span class="text-2xl font-bold text-brand">GameSetup</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pterodactyl Setup — GameSetup</title>
+  <meta name="description" content="We install and configure Pterodactyl panel for your VPS — with wings, SSL, domains, and more. Fully set up and secured." />
+  <meta name="theme-color" content="#ff9c3f" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#ff9c3f',
+            dark: '#0e0e0e',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: #0e0e0e;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #loader span {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #ff9c3f;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="bg-dark text-white font-sans">
+
+  <!-- Loading -->
+  <div id="loader"><span></span></div>
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+    });
+  </script>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-black/90 backdrop-blur-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
+      <span class="text-xl font-bold text-brand">GameSetup</span>
       <nav class="hidden md:flex space-x-6 text-sm uppercase">
         <a href="index.html" class="hover:text-brand transition">Home</a>
-        <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
+        <a href="vps.html" class="hover:text-brand transition">VPS</a>
         <a href="pterodactyl.html" class="text-brand font-semibold">Pterodactyl</a>
         <a href="bots.html" class="hover:text-brand transition">Bots</a>
-        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
         <a href="websites.html" class="hover:text-brand transition">Websites</a>
+        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
+        <a href="domains.html" class="hover:text-brand transition">Domains</a>
         <a href="contact.html" class="hover:text-brand transition">Contact</a>
       </nav>
-    </header>
-
-    <!-- Mobile Nav -->
-    <nav class="md:hidden flex flex-wrap justify-center gap-4 text-sm uppercase py-4 bg-darker">
+      <button id="menuToggle" class="md:hidden text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden px-4 pb-4 hidden flex-col space-y-2 text-sm uppercase">
       <a href="index.html" class="hover:text-brand transition">Home</a>
       <a href="vps.html" class="hover:text-brand transition">VPS</a>
-      <a href="pterodactyl.html" class="text-brand font-semibold">Ptero</a>
+      <a href="pterodactyl.html" class="text-brand font-semibold">Pterodactyl</a>
       <a href="bots.html" class="hover:text-brand transition">Bots</a>
-      <a href="hosting.html" class="hover:text-brand transition">Full</a>
-      <a href="websites.html" class="hover:text-brand transition">Web</a>
+      <a href="websites.html" class="hover:text-brand transition">Websites</a>
+      <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
+      <a href="domains.html" class="hover:text-brand transition">Domains</a>
       <a href="contact.html" class="hover:text-brand transition">Contact</a>
-    </nav>
+    </div>
+  </header>
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+  </script>
 
-    <!-- Hero Section -->
-    <section class="text-center pt-20 px-6">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Pterodactyl Setup</h1>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-        Full game panel setup with modern design and powerful features — we handle everything for you.
-      </p>
-    </section>
+  <!-- Pterodactyl Panel Setup -->
+  <section class="text-center py-20 px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Pterodactyl Panel Setup</h1>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
+      We install and configure the full Pterodactyl panel for your VPS — secured, optimized, and branded.
+    </p>
 
-    <!-- Features Section -->
-    <section class="max-w-4xl mx-auto py-16 px-6 space-y-6">
-      <div class="bg-dark border border-brand/30 rounded-xl p-6">
-        <h2 class="text-2xl font-bold text-brand mb-2">🛠️ What’s Included</h2>
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>✅ Pterodactyl Panel (v1.x latest)</li>
-          <li>✅ Full SSL, wings & daemon setup</li>
-          <li>✅ Nebula theme & addons (revamp style)</li>
-          <li>✅ Custom footer/logo, server icons</li>
-          <li>✅ Admin + User test accounts</li>
-          <li>✅ Free email SMTP (Gmail, MailerSend, etc.)</li>
-          <li>✅ Full backend security & port config</li>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl text-left">
+        <h2 class="text-xl font-bold text-brand mb-2">Basic Setup</h2>
+        <ul class="text-sm space-y-1 text-gray-300 mb-4">
+          <li>• Pterodactyl Panel</li>
+          <li>• Wings Daemon</li>
+          <li>• SSL with Let's Encrypt</li>
+          <li>• Full DNS & domain linking</li>
         </ul>
+        <p class="text-brand font-bold text-lg">৳450 / $5</p>
       </div>
 
-      <div class="bg-dark border border-brand/30 rounded-xl p-6">
-        <h2 class="text-xl font-bold text-brand mb-2">🔌 VPS Requirements</h2>
-        <p class="text-gray-300">Ubuntu 20.04 / 22.04 | 1GB+ RAM | Root access (SSH)</p>
-        <p class="text-sm text-gray-500 mt-1">Need a VPS? We can help you get one too.</p>
+      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl text-left">
+        <h2 class="text-xl font-bold text-brand mb-2">Advanced Setup</h2>
+        <ul class="text-sm space-y-1 text-gray-300 mb-4">
+          <li>• All in Basic Setup</li>
+          <li>• Auto backups & databases</li>
+          <li>• Custom Themes</li>
+          <li>• Admin training & support</li>
+        </ul>
+        <p class="text-brand font-bold text-lg">৳850 / $9</p>
       </div>
-
-      <div class="bg-dark border border-brand/30 rounded-xl p-6">
-        <h2 class="text-xl font-bold text-brand mb-2">💸 Price Range</h2>
-        <p class="text-gray-300">৳999 – ৳2,499 (depending on theme and customizations)</p>
-        <p class="text-sm text-gray-500 mt-1">Ask us for a custom quote based on your needs.</p>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <div class="text-center pb-20">
-      <a href="https://discord.gg/cBhhAnzeks" target="_blank"
-         class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition-all">
-         Order Setup via Discord
-      </a>
     </div>
 
-    <!-- Footer -->
-    <footer class="text-center text-gray-500 py-6 border-t border-gray-800">
-      <p>&copy; 2025 GameSetup. All rights reserved.</p>
-      <p class="text-sm mt-1">Trusted + Affordable</p>
-    </footer>
-  </body>
+    <p class="text-sm text-gray-400 mt-10">Panel setup includes firewall rules, security patches, and login optimization.</p>
+    <div class="mt-6">
+      <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+        class="bg-brand text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+        Order Now on Discord
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800">
+    &copy; 2025 GameSetup. All rights reserved.
+  </footer>
+</body>
 </html>
