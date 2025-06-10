@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — GameSetup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff9c3f',
+              brandHover: '#ff7a1a',
+              dark: '#0b0b0b',
+              darker: '#1a1a1a',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
+    <!-- Navbar -->
+    <header class="flex justify-between items-center p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
+      <span class="text-2xl font-bold text-brand">GameSetup</span>
+      <nav class="hidden md:flex space-x-6 text-sm uppercase">
+        <a href="index.html" class="hover:text-brand transition">Home</a>
+        <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
+        <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
+        <a href="bots.html" class="hover:text-brand transition">Bots</a>
+        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
+        <a href="websites.html" class="hover:text-brand transition">Websites</a>
+        <a href="contact.html" class="text-brand font-semibold">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Mobile Nav -->
+    <nav class="md:hidden flex flex-wrap justify-center gap-4 text-sm uppercase py-4 bg-darker">
+      <a href="index.html" class="hover:text-brand transition">Home</a>
+      <a href="vps.html" class="hover:text-brand transition">VPS</a>
+      <a href="pterodactyl.html" class="hover:text-brand transition">Ptero</a>
+      <a href="bots.html" class="hover:text-brand transition">Bots</a>
+      <a href="hosting.html" class="hover:text-brand transition">Full</a>
+      <a href="websites.html" class="hover:text-brand transition">Web</a>
+      <a href="contact.html" class="text-brand font-semibold">Contact</a>
+    </nav>
+
+    <!-- Contact Info -->
+    <section class="text-center pt-20 px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact GameSetup</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+        Got a question or want to order something? Reach out to us below!
+      </p>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="max-w-3xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-8">
+      <div class="bg-dark border border-brand/30 p-6 rounded-xl text-center hover:scale-105 transition-all duration-300">
+        <h2 class="text-xl font-bold text-brand mb-2">📧 Email</h2>
+        <p class="text-gray-300 break-words">gamesetup55@gmail.com</p>
+      </div>
+      <div class="bg-dark border border-brand/30 p-6 rounded-xl text-center hover:scale-105 transition-all duration-300">
+        <h2 class="text-xl font-bold text-brand mb-2">💬 Discord</h2>
+        <p class="text-gray-300">Join our server to open a ticket or DM: <code>@ainx.hell</code></p>
+        <a href="https://discord.gg/cBhhAnzeks" target="_blank" class="inline-block mt-4 bg-brand hover:bg-brandHover text-black px-4 py-2 rounded-full font-semibold transition-all">Join Discord</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 py-6 border-t border-gray-800">
+      <p>&copy; 2025 GameSetup. All rights reserved.</p>
+      <p class="text-sm mt-1">We're always online to help.</p>
+    </footer>
+  </body>
+</html>
