@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VPS Plans — GameSetup</title>
-  <meta name="description" content="Affordable VPS setup for games like Minecraft, FiveM, bots, and more. Fast delivery with full customization." />
-  <meta name="theme-color" content="#ff9c3f">
+  <title>VPS Hosting — GameSetup</title>
+  <meta name="description" content="Affordable VPS hosting with full setup and support. Perfect for game servers, panels, and custom setups." />
+  <meta name="theme-color" content="#ff9c3f" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -13,58 +13,28 @@
         extend: {
           colors: {
             brand: '#ff9c3f',
-            dark: '#0e0e0e'
+            dark: '#0e0e0e',
           }
         }
       }
     };
   </script>
-  <style>
-    #loader {
-      position: fixed;
-      inset: 0;
-      background: #0e0e0e;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #loader span {
-      width: 40px;
-      height: 40px;
-      border: 4px solid #ff9c3f;
-      border-top-color: transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-  </style>
 </head>
 <body class="bg-dark text-white font-sans">
 
-  <!-- Loading -->
-  <div id="loader"><span></span></div>
-  <script>
-    window.addEventListener("load", () => {
-      document.getElementById("loader").style.display = "none";
-    });
-  </script>
-
   <!-- Navbar -->
-  <header class="sticky top-0 bg-black/90 backdrop-blur-md z-50">
+  <header class="sticky top-0 bg-black/90 backdrop-blur-md z-50 shadow-lg">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
       <span class="text-xl font-bold text-brand">GameSetup</span>
-      <nav class="hidden md:flex space-x-6 text-sm uppercase">
-        <a href="index.html" class="hover:text-brand transition">Home</a>
-        <a href="vps.html" class="text-brand font-semibold">VPS</a>
-        <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
-        <a href="bots.html" class="hover:text-brand transition">Bots</a>
-        <a href="websites.html" class="hover:text-brand transition">Websites</a>
-        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
-        <a href="domains.html" class="hover:text-brand transition">Domains</a>
-        <a href="contact.html" class="hover:text-brand transition">Contact</a>
+      <nav class="hidden md:flex space-x-3 text-sm">
+        <a href="index.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Home</a>
+        <a href="vps.html" class="bg-brand text-black px-4 py-2 rounded-full font-semibold">VPS</a>
+        <a href="pterodactyl.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Pterodactyl</a>
+        <a href="bots.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Bots</a>
+        <a href="websites.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Websites</a>
+        <a href="hosting.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Full Setup</a>
+        <a href="domains.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Domains</a>
+        <a href="contact.html" class="bg-brand text-black px-4 py-2 rounded-full font-semibold hover:opacity-90 transition">Contact</a>
       </nav>
       <button id="menuToggle" class="md:hidden text-white">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
@@ -74,73 +44,77 @@
         </svg>
       </button>
     </div>
-    <div id="mobileMenu" class="md:hidden px-4 pb-4 hidden flex-col space-y-2 text-sm uppercase">
-      <a href="index.html" class="hover:text-brand transition">Home</a>
-      <a href="vps.html" class="text-brand font-semibold">VPS</a>
-      <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
-      <a href="bots.html" class="hover:text-brand transition">Bots</a>
-      <a href="websites.html" class="hover:text-brand transition">Websites</a>
-      <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
-      <a href="domains.html" class="hover:text-brand transition">Domains</a>
-      <a href="contact.html" class="hover:text-brand transition">Contact</a>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden px-4 pb-4 hidden flex-col space-y-3">
+      <a href="index.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Home</a>
+      <a href="vps.html" class="bg-brand text-black px-4 py-2 rounded-full font-semibold block text-center">VPS</a>
+      <a href="pterodactyl.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Pterodactyl</a>
+      <a href="bots.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Bots</a>
+      <a href="websites.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Websites</a>
+      <a href="hosting.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Full Setup</a>
+      <a href="domains.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Domains</a>
+      <a href="contact.html" class="bg-brand text-black px-4 py-2 rounded-full font-semibold block text-center">Contact</a>
     </div>
   </header>
+
   <script>
     document.getElementById("menuToggle").addEventListener("click", () => {
       document.getElementById("mobileMenu").classList.toggle("hidden");
     });
   </script>
 
-  <!-- VPS Plans -->
+  <!-- VPS Section -->
   <section class="text-center py-20 px-4">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">VPS Setup & Plans</h1>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">VPS Hosting Plans</h1>
     <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
-      We provide budget VPS setups with everything pre-installed. Choose a plan and order via Discord.
+      Get powerful, pre-configured VPS servers for game hosting, panels, or any custom setup. Affordable and fast.
     </p>
 
-    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl text-left">
-        <h2 class="text-xl font-bold text-brand mb-2">Starter</h2>
-        <p class="text-gray-400 text-sm mb-3">Best for single bot or lightweight use.</p>
-        <ul class="text-sm space-y-1 text-gray-300 mb-4">
-          <li>• 1 vCPU, 1 GB RAM</li>
-          <li>• 15 GB SSD</li>
-          <li>• 1 IPv4 address</li>
-          <li>• Ubuntu / Debian / Panel ready</li>
-        </ul>
-        <p class="text-brand font-bold text-lg">৳350 / $4</p>
-      </div>
-
-      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl text-left">
-        <h2 class="text-xl font-bold text-brand mb-2">Standard</h2>
-        <p class="text-gray-400 text-sm mb-3">Good for small servers or multiple bots.</p>
-        <ul class="text-sm space-y-1 text-gray-300 mb-4">
-          <li>• 2 vCPU, 2 GB RAM</li>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
+      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl">
+        <h2 class="text-xl font-bold text-brand mb-2">Basic</h2>
+        <ul class="text-sm text-gray-300 space-y-1 mb-4">
+          <li>• 2 GB RAM</li>
+          <li>• 1 vCore CPU</li>
           <li>• 30 GB SSD</li>
-          <li>• Full root access</li>
-          <li>• Includes firewall setup</li>
+          <li>• 1 IPv4</li>
+          <li>• DDoS Protected</li>
         </ul>
-        <p class="text-brand font-bold text-lg">৳600 / $6.50</p>
+        <p class="text-brand font-semibold mb-2">৳350 / $4.00</p>
       </div>
 
-      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl text-left">
-        <h2 class="text-xl font-bold text-brand mb-2">Pro</h2>
-        <p class="text-gray-400 text-sm mb-3">Great for Pterodactyl or hosting your own clients.</p>
-        <ul class="text-sm space-y-1 text-gray-300 mb-4">
-          <li>• 4 vCPU, 4 GB RAM</li>
-          <li>• 60 GB SSD</li>
-          <li>• Panel & SSH ready</li>
-          <li>• Customization included</li>
+      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl">
+        <h2 class="text-xl font-bold text-brand mb-2">Standard</h2>
+        <ul class="text-sm text-gray-300 space-y-1 mb-4">
+          <li>• 4 GB RAM</li>
+          <li>• 2 vCore CPU</li>
+          <li>• 50 GB SSD</li>
+          <li>• 1 IPv4</li>
+          <li>• DDoS Protected</li>
         </ul>
-        <p class="text-brand font-bold text-lg">৳1200 / $12</p>
+        <p class="text-brand font-semibold mb-2">৳650 / $7.00</p>
+      </div>
+
+      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl">
+        <h2 class="text-xl font-bold text-brand mb-2">Pro</h2>
+        <ul class="text-sm text-gray-300 space-y-1 mb-4">
+          <li>• 8 GB RAM</li>
+          <li>• 3 vCore CPU</li>
+          <li>• 80 GB SSD</li>
+          <li>• 1 IPv4</li>
+          <li>• DDoS Protected</li>
+        </ul>
+        <p class="text-brand font-semibold mb-2">৳1050 / $11.00</p>
       </div>
     </div>
 
-    <p class="text-sm text-gray-400 mt-10">Payment via bKash, Nagad, or Crypto. Trusted exchanger available for international users.</p>
-    <div class="mt-6">
+    <div class="mt-10">
+      <p class="text-sm text-gray-400 mb-4">
+        Need something custom? Just ask. We support both KVM and container-based virtualization.
+      </p>
       <a href="https://discord.gg/cBhhAnzeks" target="_blank"
-        class="bg-brand text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
-        Order via Discord
+        class="bg-brand text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition inline-block">
+        Order on Discord
       </a>
     </div>
   </section>
