@@ -23,10 +23,7 @@
   <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
     <!-- Navbar -->
     <header class="flex justify-between items-center p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
-      <div class="flex items-center space-x-2">
-        <img src="/assets/logo.png" alt="GameSetup Logo" class="h-10 w-auto" />
-        <span class="text-2xl font-bold text-brand">GameSetup</span>
-      </div>
+      <span class="text-2xl font-bold text-brand">GameSetup</span>
       <nav class="hidden md:flex space-x-6 text-sm uppercase">
         <a href="index.html" class="hover:text-brand transition">Home</a>
         <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
@@ -38,50 +35,66 @@
       </nav>
     </header>
 
-    <!-- Hero -->
+    <!-- Mobile Nav -->
+    <nav class="md:hidden flex flex-wrap justify-center gap-4 text-sm uppercase py-4 bg-darker">
+      <a href="index.html" class="hover:text-brand transition">Home</a>
+      <a href="vps.html" class="hover:text-brand transition">VPS</a>
+      <a href="pterodactyl.html" class="hover:text-brand transition">Ptero</a>
+      <a href="bots.html" class="hover:text-brand transition">Bots</a>
+      <a href="hosting.html" class="text-brand font-semibold">Full</a>
+      <a href="websites.html" class="hover:text-brand transition">Web</a>
+      <a href="contact.html" class="hover:text-brand transition">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
     <section class="text-center pt-20 px-6">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Full Hosting Setup</h1>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto">We build your entire hosting business — from server to website — all in one place.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+        Want everything ready from scratch? We handle domain, VPS, panel, website — all under one service.
+      </p>
     </section>
 
-    <!-- What's Included -->
-    <section class="max-w-4xl mx-auto py-16 px-4 grid gap-8">
-      <div class="bg-dark border border-brand/20 p-6 rounded-2xl">
-        <h2 class="text-2xl font-semibold text-brand mb-2">🛠️ What’s Included:</h2>
-        <ul class="text-gray-300 space-y-2 list-disc list-inside">
-          <li>Pterodactyl Panel Setup (with theme & extensions)</li>
-          <li>VPS Setup & Optimization</li>
-          <li>Discord Bot Integration</li>
-          <li>Custom Website Development</li>
-          <li>Free Subdomain or Domain Help</li>
-          <li>Bot + Panel Hosting Support</li>
+    <!-- Features Section -->
+    <section class="max-w-5xl mx-auto py-16 px-6 space-y-10">
+      <div class="bg-dark border border-brand/30 rounded-xl p-6">
+        <h2 class="text-2xl font-bold text-brand mb-2">🎯 What’s Included</h2>
+        <ul class="list-disc list-inside text-gray-300 space-y-1">
+          <li>✅ Domain (Free or Custom)</li>
+          <li>✅ VPS Setup (with or without panel)</li>
+          <li>✅ Game Panel (Pterodactyl + theme)</li>
+          <li>✅ Website + Dashboard (optional)</li>
+          <li>✅ Discord Bot Integration (optional)</li>
+          <li>✅ Email + SSL + Security configs</li>
+          <li>✅ Full root/admin access to everything</li>
         </ul>
       </div>
 
-      <div class="bg-dark border border-brand/20 p-6 rounded-2xl">
-        <h2 class="text-xl font-semibold text-brand mb-2">💰 Pricing:</h2>
-        <p class="text-gray-300">Full Hosting Setup starts at <span class="text-white font-bold">৳6,999 – ৳11,999+</span> depending on your needs.</p>
-        <p class="text-gray-400 text-sm mt-2 italic">Let us know your full plan and we’ll give you a custom quote.</p>
+      <div class="bg-dark border border-brand/30 rounded-xl p-6">
+        <h2 class="text-xl font-bold text-brand mb-2">💸 Price Range</h2>
+        <p class="text-gray-300">৳1,999 – ৳6,999 depending on complexity and tools</p>
+        <p class="text-sm text-gray-500 mt-1">We offer full service or partial — your choice.</p>
       </div>
 
-      <div class="bg-dark border border-brand/20 p-6 rounded-2xl">
-        <h2 class="text-xl font-semibold text-brand mb-2">📦 Requirements:</h2>
-        <p class="text-gray-300">You’ll need a VPS or we can help you buy and set it up.</p>
+      <div class="bg-dark border border-brand/30 rounded-xl p-6">
+        <h2 class="text-xl font-bold text-brand mb-2">🌎 Domain Options</h2>
+        <p class="text-gray-300">
+          Free subdomain (.ix.tc or others) or premium (.com, .net, etc.) available. Domain setup included.
+        </p>
       </div>
     </section>
 
     <!-- CTA -->
-    <div class="text-center pb-10">
+    <div class="text-center pb-20">
       <a href="https://discord.gg/cBhhAnzeks" target="_blank"
          class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition-all">
-         Order Full Setup via Discord
+         Get Full Setup on Discord
       </a>
     </div>
 
     <!-- Footer -->
     <footer class="text-center text-gray-500 py-6 border-t border-gray-800">
       <p>&copy; 2025 GameSetup. All rights reserved.</p>
-      <p class="text-sm mt-1">Trusted + Affordable</p>
+      <p class="text-sm mt-1">One-stop hosting solutions.</p>
     </footer>
   </body>
 </html>
