@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord Bots — GameSetup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff9c3f',
+              brandHover: '#ff7a1a',
+              dark: '#0b0b0b',
+              darker: '#1a1a1a',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
+    <!-- Navbar -->
+    <header class="flex justify-between items-center p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
+      <div class="flex items-center space-x-2">
+        <img src="/assets/logo.png" alt="GameSetup Logo" class="h-10 w-auto" />
+        <span class="text-2xl font-bold text-brand">GameSetup</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm uppercase">
+        <a href="index.html" class="hover:text-brand transition">Home</a>
+        <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
+        <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
+        <a href="bots.html" class="text-brand font-semibold">Bots</a>
+        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
+        <a href="websites.html" class="hover:text-brand transition">Websites</a>
+        <a href="contact.html" class="hover:text-brand transition">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="text-center pt-20 px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Discord Bot Plans</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+        We build fast, reliable, and powerful bots tailored exactly to your needs – starting from just ৳249! 💸
+      </p>
+    </section>
+
+    <!-- Features -->
+    <section class="max-w-4xl mx-auto py-12 px-6">
+      <h2 class="text-2xl font-semibold mb-6 text-brand">🛠️ What We Can Build:</h2>
+      <ul class="space-y-2 text-gray-300 list-disc list-inside">
+        <li>✅ Moderation Bots (ban, kick, mute, logs)</li>
+        <li>✅ Welcome/Leave Systems</li>
+        <li>✅ Ticket & Support Bots</li>
+        <li>✅ Leveling / XP Bots</li>
+        <li>✅ Custom Economy / Games</li>
+        <li>✅ Reaction Roles</li>
+        <li>✅ Slash Commands</li>
+        <li>✅ Auto Role / Anti-Link / Anti-Spam</li>
+        <li>✅ YouTube / Twitch Notifiers</li>
+        <li>✅ AND MORE – just tell us your idea!</li>
+      </ul>
+    </section>
+
+    <!-- Bot Plans -->
+    <section class="max-w-5xl mx-auto py-10 px-4 grid md:grid-cols-2 gap-10">
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-xl font-bold text-brand mb-2">🟢 Simple Bot</h2>
+        <p class="text-gray-300">Basic commands like info/help/ping. ৳249 – ৳649</p>
+      </div>
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-xl font-bold text-brand mb-2">🔵 Standard Bot</h2>
+        <p class="text-gray-300">Moderation, welcome/leave, logs, anti-spam. ৳650 – ৳1,899</p>
+      </div>
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-xl font-bold text-brand mb-2">🟣 Advanced Bot</h2>
+        <p class="text-gray-300">Custom features, slash commands, economy, database. ৳1,900 – ৳4,499</p>
+      </div>
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-xl font-bold text-brand mb-2">🔥 Super Bot</h2>
+        <p class="text-gray-300">Dashboards, APIs, advanced logic. Starting ৳4,500+</p>
+      </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="text-center text-gray-300 px-6 max-w-3xl mx-auto space-y-4 pb-16">
+      <p>📦 Every Bot Includes:</p>
+      <ul class="list-disc list-inside text-left">
+        <li>Hosted for free (if needed)</li>
+        <li>Clean, lag-free performance</li>
+        <li>Slash command support</li>
+        <li>Quick bug fixes & minor updates</li>
+        <li>Free basic setup in your servers</li>
+      </ul>
+
+      <p class="pt-6">💳 Payment Options: bKash | Nagad | Crypto (Advance required)</p>
+
+      <p class="pt-4">📩 How to Order:</p>
+      <ol class="list-decimal list-inside text-left">
+        <li>Open a ticket or DM <code>@ainx.hell</code></li>
+        <li>Share your bot idea</li>
+        <li>Get a custom quote & delivery time</li>
+        <li>We develop it for you — fast & smooth! 💼</li>
+      </ol>
+
+      <p class="pt-4">📧 Email: gamesetup55@gmail.com</p>
+    </section>
+
+    <!-- CTA -->
+    <div class="text-center pb-20">
+      <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+         class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition-all">
+         Order via Discord
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 py-6 border-t border-gray-800">
+      <p>&copy; 2025 GameSetup. All rights reserved.</p>
+      <p class="text-sm mt-1">Trusted + Affordable</p>
+    </footer>
+  </body>
+</html>
