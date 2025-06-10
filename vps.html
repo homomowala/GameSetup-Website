@@ -1,108 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VPS Plans — GameSetup</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: '#ff9c3f',
-              brandHover: '#ff7a1a',
-              dark: '#0b0b0b',
-              darker: '#1a1a1a',
-            },
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VPS Plans — GameSetup</title>
+  <meta name="description" content="Affordable and reliable VPS plans for gaming, hosting, and bot deployment.">
+  <meta name="theme-color" content="#ff9c3f">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#ff9c3f',
+            brandHover: '#ff7a1a',
+            dark: '#0b0b0b',
+            darker: '#1a1a1a',
           },
         },
-      };
-    </script>
-  </head>
-  <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
-    <!-- Navbar -->
-    <header class="p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
-      <div class="flex justify-between items-center">
-        <span class="text-2xl font-bold text-brand">GameSetup</span>
-        <button class="md:hidden text-white" onclick="document.getElementById('mobileNav').classList.toggle('hidden')">
-          ☰
-        </button>
-        <nav class="hidden md:flex space-x-6 text-sm uppercase">
-          <a href="index.html" class="hover:text-brand transition">Home</a>
-          <a href="vps.html" class="text-brand font-semibold">VPS Plans</a>
-          <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
-          <a href="bots.html" class="hover:text-brand transition">Bots</a>
-          <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
-          <a href="websites.html" class="hover:text-brand transition">Websites</a>
-          <a href="contact.html" class="hover:text-brand transition">Contact</a>
-        </nav>
-      </div>
-      <!-- Mobile Nav -->
-      <nav id="mobileNav" class="md:hidden mt-2 space-y-2 hidden text-sm uppercase">
-        <a href="index.html" class="block text-white hover:text-brand">Home</a>
-        <a href="vps.html" class="block text-brand font-semibold">VPS Plans</a>
-        <a href="pterodactyl.html" class="block text-white hover:text-brand">Pterodactyl</a>
-        <a href="bots.html" class="block text-white hover:text-brand">Bots</a>
-        <a href="hosting.html" class="block text-white hover:text-brand">Full Setup</a>
-        <a href="websites.html" class="block text-white hover:text-brand">Websites</a>
-        <a href="contact.html" class="block text-white hover:text-brand">Contact</a>
-      </nav>
-    </header>
+      },
+    };
+  </script>
+  <style>
+    /* Loading screen styles */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0b0b0b;
+      color: #ff9c3f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
 
-    <!-- Hero -->
-    <section class="text-center py-16 px-4">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">VPS Hosting Plans</h1>
-      <p class="text-gray-300 max-w-2xl mx-auto">
-        Reliable & Fast VPS Hosting with SSD, DDoS protection, and instant setup.
-      </p>
-    </section>
+  <!-- Loading Screen -->
+  <div id="loader">Loading GameSetup...</div>
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.style.opacity = '0';
+      setTimeout(() => loader.style.display = 'none', 500);
+    });
+  </script>
 
-    <!-- VPS Plans Table -->
-    <section class="max-w-6xl mx-auto px-4 pb-20">
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-dark border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
-          <h2 class="text-xl font-bold text-brand mb-2">Nano</h2>
-          <p class="text-gray-300">512MB RAM, 1vCore, 10GB SSD<br>৳99/mo</p>
-        </div>
-        <div class="bg-dark border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
-          <h2 class="text-xl font-bold text-brand mb-2">Micro</h2>
-          <p class="text-gray-300">1GB RAM, 1vCore, 15GB SSD<br>৳199/mo</p>
-        </div>
-        <div class="bg-dark border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
-          <h2 class="text-xl font-bold text-brand mb-2">Starter</h2>
-          <p class="text-gray-300">2GB RAM, 1vCore, 25GB SSD<br>৳349/mo</p>
-        </div>
-        <div class="bg-dark border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
-          <h2 class="text-xl font-bold text-brand mb-2">Pro</h2>
-          <p class="text-gray-300">4GB RAM, 2vCore, 50GB SSD<br>৳649/mo</p>
-        </div>
-        <div class="bg-dark border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
-          <h2 class="text-xl font-bold text-brand mb-2">Ultra</h2>
-          <p class="text-gray-300">6GB RAM, 3vCore, 80GB SSD<br>৳949/mo</p>
-        </div>
-        <div class="bg-dark border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
-          <h2 class="text-xl font-bold text-brand mb-2">Beast</h2>
-          <p class="text-gray-300">8GB RAM, 4vCore, 100GB SSD<br>৳1,199/mo</p>
-        </div>
-      </div>
+  <!-- Navbar -->
+  <header class="flex justify-between items-center p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
+    <span class="text-2xl font-bold text-brand">GameSetup</span>
+    <nav class="hidden md:flex space-x-6 text-sm uppercase">
+      <a href="index.html" class="hover:text-brand transition">Home</a>
+      <a href="vps.html" class="text-brand font-semibold">VPS Plans</a>
+      <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
+      <a href="bots.html" class="hover:text-brand transition">Bots</a>
+      <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
+      <a href="websites.html" class="hover:text-brand transition">Websites</a>
+      <a href="domains.html" class="hover:text-brand transition">Domains</a>
+      <a href="contact.html" class="hover:text-brand transition">Contact</a>
+    </nav>
+    <div class="md:hidden text-brand font-bold text-xl">≡</div>
+  </header>
 
-      <p class="text-center text-sm text-gray-400 mt-8">
-        Titan Plans also available on request — high performance for enterprise setups.
-      </p>
+  <!-- Hero -->
+  <section class="text-center pt-20 px-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">VPS Plans</h1>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto">Reliable virtual servers perfect for Minecraft, FiveM, bots, and more — powered by GameSetup.</p>
+  </section>
 
-      <div class="text-center mt-6">
-        <a href="https://discord.gg/cBhhAnzeks" target="_blank"
-          class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition-all">
-          Order via Discord
-        </a>
-      </div>
-    </section>
+  <!-- VPS Plans -->
+  <section class="max-w-5xl mx-auto py-16 px-4 grid md:grid-cols-3 gap-8">
+    <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300 text-center">
+      <h2 class="text-xl font-bold text-brand mb-2">Starter VPS</h2>
+      <p class="text-gray-300 mb-2">1 vCore, 2GB RAM, 20GB SSD</p>
+      <p class="text-gray-400 text-sm mb-4">Good for bots & small servers</p>
+      <span class="text-brand font-semibold text-lg">$3.99/mo</span>
+    </div>
+    <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300 text-center">
+      <h2 class="text-xl font-bold text-brand mb-2">Pro VPS</h2>
+      <p class="text-gray-300 mb-2">2 vCore, 4GB RAM, 40GB SSD</p>
+      <p class="text-gray-400 text-sm mb-4">Ideal for medium-size servers</p>
+      <span class="text-brand font-semibold text-lg">$6.99/mo</span>
+    </div>
+    <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300 text-center">
+      <h2 class="text-xl font-bold text-brand mb-2">Ultra VPS</h2>
+      <p class="text-gray-300 mb-2">4 vCore, 8GB RAM, 80GB SSD</p>
+      <p class="text-gray-400 text-sm mb-4">Perfect for game hosting & multiple services</p>
+      <span class="text-brand font-semibold text-lg">$11.99/mo</span>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="text-center text-gray-500 py-6 border-t border-gray-800">
-      <p>&copy; 2025 GameSetup. All rights reserved.</p>
-      <p class="text-sm mt-1">Trusted + Affordable</p>
-    </footer>
-  </body>
+  <!-- Order -->
+  <div class="text-center pb-20">
+    <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+       class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition-all">
+       Order via Discord
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 py-6 border-t border-gray-800">
+    <p>&copy; 2025 GameSetup. All rights reserved.</p>
+    <p class="text-sm mt-1">Trusted + Affordable</p>
+  </footer>
+
+</body>
 </html>
