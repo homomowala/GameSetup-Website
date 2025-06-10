@@ -1,97 +1,111 @@
-<!DOCTYPE html>  <html lang="en">    <head>    
-  <meta charset="UTF-8" />    
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
-  <title>Full Setup — GameSetup</title>    
-  <meta name="description" content="We offer full hosting setup including VPS, panels, bots, websites and branding. Everything you need to launch your game brand." />    
-  <meta name="theme-color" content="#ff9c3f" />    
-  <script src="https://cdn.tailwindcss.com"></script>    
-  <script>    
-    tailwind.config = {    
-      theme: {    
-        extend: {    
-          colors: {    
-            brand: '#ff9c3f',    
-            dark: '#0e0e0e',    
-          }    
-        }    
-      }    
-    };    
-  </script>    
-</head>    
-<body class="bg-dark text-white font-sans">    
-<!-- Navbar -->     
-<header class="sticky top-0 bg-black/90 backdrop-blur-md z-50">    
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">    
-      <span class="text-xl font-bold text-brand">GameSetup</span>    
-      <nav class="hidden md:flex space-x-6 text-sm uppercase">    
-        <a href="index.html" class="hover:text-brand transition">Home</a>    
-        <a href="vps.html" class="hover:text-brand transition">VPS</a>    
-        <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>    
-        <a href="bots.html" class="hover:text-brand transition">Bots</a>    
-        <a href="websites.html" class="hover:text-brand transition">Websites</a>    
-        <a href="hosting.html" class="text-brand font-semibold">Full Setup</a>    
-        <a href="domains.html" class="hover:text-brand transition">Domains</a>    
-        <a href="contact.html" class="hover:text-brand transition">Contact</a>    
-      </nav>    
-      <button id="menuToggle" class="md:hidden text-white">    
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"    
-          viewBox="0 0 24 24">    
-          <path stroke-linecap="round" stroke-linejoin="round"    
-            d="M4 6h16M4 12h16M4 18h16" />    
-        </svg>    
-      </button>    
-    </div>    
-    <div id="mobileMenu" class="md:hidden px-4 pb-4 hidden flex-col space-y-2 text-sm uppercase">    
-      <a href="index.html" class="hover:text-brand transition">Home</a>    
-      <a href="vps.html" class="hover:text-brand transition">VPS</a>    
-      <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>    
-      <a href="bots.html" class="hover:text-brand transition">Bots</a>    
-      <a href="websites.html" class="hover:text-brand transition">Websites</a>    
-      <a href="hosting.html" class="text-brand font-semibold">Full Setup</a>    
-      <a href="domains.html" class="hover:text-brand transition">Domains</a>    
-      <a href="contact.html" class="hover:text-brand transition">Contact</a>    
-    </div>    
-  </header>    
-  <script>    
-    document.getElementById("menuToggle").addEventListener("click", () => {    
-      document.getElementById("mobileMenu").classList.toggle("hidden");    
-    });    
-  </script>    <!-- Hosting Section -->    <section class="text-center py-20 px-4">    
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Full Setup Service</h1>    
-    <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-10">    
-      From panel to bots to branding — we set up your entire hosting business or game community.    
-    </p>  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">    
-  <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl text-left">    
-    <h2 class="text-xl font-bold text-brand mb-2">What’s Included</h2>    
-    <ul class="text-sm text-gray-300 space-y-1">    
-      <li>• VPS with setup</li>    
-      <li>• Pterodactyl Panel</li>    
-      <li>• Bots (Admin + Brand)</li>    
-      <li>• Custom Website (optional)</li>    
-      <li>• Hosting configurations</li>    
-      <li>• Security setup</li>    
-      <li>• Full branding support</li>    
-    </ul>    
-  </div>      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl text-left">    
-    <h2 class="text-xl font-bold text-brand mb-2">Why Choose Us</h2>    
-    <ul class="text-sm text-gray-300 space-y-1">    
-      <li>• Affordable & Reliable</li>    
-      <li>• Fast delivery</li>    
-      <li>• Friendly support via Discord</li>    
-      <li>• Trusted by many creators</li>    
-      <li>• Optional upgrades anytime</li>    
-    </ul>    
-  </div>    
-</div>    <div class="mt-10">    
-  <p class="text-sm text-gray-400 mb-4">    
-    Pricing starts from ৳1,999 — depending on your needs.    
-  </p>    
-  <a href="https://discord.gg/cBhhAnzeks" target="_blank"    
-    class="bg-brand text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">    
-    Contact for Full Setup    
-  </a>    
-</div>    </section>    <!-- Footer -->    <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800">    
-    &copy; 2025 GameSetup. All rights reserved.    
-  </footer>    
-</body>    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Setup — GameSetup</title>
+  <meta name="description" content="We offer full hosting setup including VPS, panels, bots, websites and branding. Everything you need to launch your game brand." />
+  <meta name="theme-color" content="#ff9c3f" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#ff9c3f',
+            dark: '#0e0e0e',
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-black/90 backdrop-blur-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
+      <span class="text-xl font-bold text-brand">GameSetup</span>
+      <nav class="hidden md:flex space-x-2 text-sm">
+        <a href="index.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Home</a>
+        <a href="vps.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">VPS</a>
+        <a href="pterodactyl.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Pterodactyl</a>
+        <a href="bots.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Bots</a>
+        <a href="websites.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Websites</a>
+        <a href="hosting.html" class="bg-brand text-black px-4 py-2 rounded-md font-semibold">Full Setup</a>
+        <a href="domains.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Domains</a>
+        <a href="contact.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Contact</a>
+      </nav>
+      <button id="menuToggle" class="md:hidden text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden px-4 pb-4 hidden flex-col space-y-2 text-sm">
+      <a href="index.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Home</a>
+      <a href="vps.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">VPS</a>
+      <a href="pterodactyl.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Pterodactyl</a>
+      <a href="bots.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Bots</a>
+      <a href="websites.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Websites</a>
+      <a href="hosting.html" class="bg-brand text-black px-4 py-2 rounded-md font-semibold">Full Setup</a>
+      <a href="domains.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Domains</a>
+      <a href="contact.html" class="bg-brand/10 hover:bg-brand text-white px-4 py-2 rounded-md transition">Contact</a>
+    </div>
+  </header>
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- Full Setup Section -->
+  <section class="text-center py-20 px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Full Setup Service</h1>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
+      From panel to bots to branding — we set up your entire hosting business or game community.
+    </p>
+
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 text-left">
+      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl">
+        <h2 class="text-xl font-bold text-brand mb-2">What’s Included</h2>
+        <ul class="text-sm text-gray-300 space-y-1">
+          <li>• VPS with setup</li>
+          <li>• Pterodactyl Panel</li>
+          <li>• Bots (Admin + Brand)</li>
+          <li>• Custom Website (optional)</li>
+          <li>• Hosting configurations</li>
+          <li>• Security setup</li>
+          <li>• Full branding support</li>
+        </ul>
+      </div>
+      <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl">
+        <h2 class="text-xl font-bold text-brand mb-2">Why Choose Us</h2>
+        <ul class="text-sm text-gray-300 space-y-1">
+          <li>• Affordable & Reliable</li>
+          <li>• Fast delivery</li>
+          <li>• Friendly support via Discord</li>
+          <li>• Trusted by many creators</li>
+          <li>• Optional upgrades anytime</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <p class="text-sm text-gray-400 mb-4">
+        Pricing starts from ৳1,999 — depending on your needs.
+      </p>
+      <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+         class="bg-brand text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+        Contact for Full Setup
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800">
+    &copy; 2025 GameSetup. All rights reserved.
+  </footer>
+
+</body>
 </html>
