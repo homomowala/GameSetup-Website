@@ -4,19 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GameSetup — We Set Up Your Game Servers, Bots & Brand</title>
-  <meta name="title" content="GameSetup — We Set Up Your Game Servers, Bots & Brand" />
   <meta name="description" content="We help gamers and creators set up everything — VPS, Pterodactyl panel, Discord bots, websites, and more. Trusted, affordable, and fully customized." />
 
-  <!-- Embed for Discord / Social Media -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://gamesetup.netlify.app/" />
+  <!-- Embed Meta -->
   <meta property="og:title" content="GameSetup — We Set Up Your Game Servers, Bots & Brand" />
   <meta property="og:description" content="We help gamers and creators set up everything — VPS, Pterodactyl panel, Discord bots, websites, and more. Trusted, affordable, and fully customized." />
   <meta property="og:image" content="https://gamesetup.netlify.app/assets/embed.png" />
-
+  <meta property="og:url" content="https://gamesetup.netlify.app/" />
+  <meta property="og:type" content="website" />
   <meta name="theme-color" content="#ff9c3f" />
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -36,9 +33,22 @@
 <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
 
   <!-- Navbar -->
-  <header class="flex justify-between items-center p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
-    <span class="text-2xl font-bold text-brand">GameSetup</span>
-    <nav class="hidden md:flex space-x-6 text-sm uppercase">
+  <header class="bg-dark shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4 px-6">
+      <span class="text-2xl font-bold text-brand">GameSetup</span>
+      <nav class="hidden md:flex space-x-6 text-sm uppercase">
+        <a href="index.html" class="text-brand font-semibold">Home</a>
+        <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
+        <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
+        <a href="bots.html" class="hover:text-brand transition">Bots</a>
+        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
+        <a href="websites.html" class="hover:text-brand transition">Websites</a>
+        <a href="domains.html" class="hover:text-brand transition">Domains</a>
+        <a href="contact.html" class="hover:text-brand transition">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">&#9776;</button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden flex-col bg-dark px-6 pb-4 space-y-2 text-sm uppercase">
       <a href="index.html" class="text-brand font-semibold">Home</a>
       <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
       <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
@@ -47,11 +57,13 @@
       <a href="websites.html" class="hover:text-brand transition">Websites</a>
       <a href="domains.html" class="hover:text-brand transition">Domains</a>
       <a href="contact.html" class="hover:text-brand transition">Contact</a>
-    </nav>
-    <!-- Mobile menu toggle (optional dropdown or side menu) -->
-    <div class="md:hidden">
-      <!-- You can add a burger menu here if needed -->
     </div>
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', () => {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      });
+    </script>
   </header>
 
   <!-- Hero Section -->
