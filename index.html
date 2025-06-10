@@ -6,7 +6,7 @@
   <title>GameSetup — We Set Up Your Game Servers, Bots & Brand</title>
   <meta name="description" content="We help gamers and creators set up everything — VPS, Pterodactyl panel, Discord bots, websites, and more. Trusted, affordable, and fully customized." />
 
-  <!-- Embed Meta -->
+  <!-- Embed / Social Preview -->
   <meta property="og:title" content="GameSetup — We Set Up Your Game Servers, Bots & Brand" />
   <meta property="og:description" content="We help gamers and creators set up everything — VPS, Pterodactyl panel, Discord bots, websites, and more. Trusted, affordable, and fully customized." />
   <meta property="og:image" content="https://gamesetup.netlify.app/assets/embed.png" />
@@ -14,6 +14,7 @@
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#ff9c3f" />
 
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -29,13 +30,54 @@
       },
     };
   </script>
+  <style>
+    /* Loading screen animation */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0b0b0b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: #ff9c3f;
+      border-radius: 50%;
+      margin: 0 6px;
+      animation: bounce 0.6s infinite alternate;
+    }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-12px); }
+    }
+  </style>
 </head>
 <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
 
+  <!-- Loading screen -->
+  <div id="loader">
+    <div class="flex space-x-2">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
   <!-- Navbar -->
-  <header class="bg-dark shadow-md sticky top-0 z-50">
+  <header class="bg-dark text-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4 px-6">
       <span class="text-2xl font-bold text-brand">GameSetup</span>
+      <button id="menuBtn" class="md:hidden text-brand focus:outline-none">
+        ☰
+      </button>
       <nav class="hidden md:flex space-x-6 text-sm uppercase">
         <a href="index.html" class="text-brand font-semibold">Home</a>
         <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
@@ -46,24 +88,17 @@
         <a href="domains.html" class="hover:text-brand transition">Domains</a>
         <a href="contact.html" class="hover:text-brand transition">Contact</a>
       </nav>
-      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">&#9776;</button>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden flex-col bg-dark px-6 pb-4 space-y-2 text-sm uppercase">
-      <a href="index.html" class="text-brand font-semibold">Home</a>
-      <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
-      <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
-      <a href="bots.html" class="hover:text-brand transition">Bots</a>
-      <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
-      <a href="websites.html" class="hover:text-brand transition">Websites</a>
-      <a href="domains.html" class="hover:text-brand transition">Domains</a>
-      <a href="contact.html" class="hover:text-brand transition">Contact</a>
+    <div id="mobileMenu" class="md:hidden hidden flex-col space-y-3 px-6 pb-4">
+      <a href="index.html" class="text-brand">Home</a>
+      <a href="vps.html">VPS Plans</a>
+      <a href="pterodactyl.html">Pterodactyl</a>
+      <a href="bots.html">Bots</a>
+      <a href="hosting.html">Full Setup</a>
+      <a href="websites.html">Websites</a>
+      <a href="domains.html">Domains</a>
+      <a href="contact.html">Contact</a>
     </div>
-    <script>
-      document.getElementById('menu-btn').addEventListener('click', () => {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
-      });
-    </script>
   </header>
 
   <!-- Hero Section -->
@@ -104,5 +139,18 @@
     <p>&copy; 2025 GameSetup. All rights reserved.</p>
   </footer>
 
+  <script>
+    // Loading screen removal
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      if (loader) loader.style.display = 'none';
+    });
+
+    // Mobile menu toggle
+    document.getElementById("menuBtn").addEventListener("click", () => {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
 </body>
 </html>
