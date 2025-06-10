@@ -4,17 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GameSetup — We Set Up Your Game Servers, Bots & Brand</title>
+  <meta name="title" content="GameSetup — We Set Up Your Game Servers, Bots & Brand" />
   <meta name="description" content="We help gamers and creators set up everything — VPS, Pterodactyl panel, Discord bots, websites, and more. Trusted, affordable, and fully customized." />
-
-  <!-- Embed / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gamesetup.netlify.app/" />
   <meta property="og:title" content="GameSetup — We Set Up Your Game Servers, Bots & Brand" />
   <meta property="og:description" content="We help gamers and creators set up everything — VPS, Pterodactyl panel, Discord bots, websites, and more. Trusted, affordable, and fully customized." />
-  <meta property="og:image" content="https://gamesetup.netlify.app/assets/embed.png" />
-  <meta property="og:url" content="https://gamesetup.netlify.app/" />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#ff9c3f" />
-
-  <!-- Tailwind CSS -->
+  <meta property="og:image" content="https://gamesetup.netlify.app/embed.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://gamesetup.netlify.app/" />
+  <meta property="twitter:title" content="GameSetup — We Set Up Your Game Servers, Bots & Brand" />
+  <meta property="twitter:description" content="We help gamers and creators set up everything — VPS, Pterodactyl panel, Discord bots, websites, and more. Trusted, affordable, and fully customized." />
+  <meta property="twitter:image" content="https://gamesetup.netlify.app/embed.png" />
+  <meta name="theme-color" content="#ff9c3f">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -22,135 +24,130 @@
         extend: {
           colors: {
             brand: '#ff9c3f',
-            brandHover: '#ff7a1a',
-            dark: '#0b0b0b',
-            darker: '#1a1a1a',
-          },
-        },
-      },
+            dark: '#0e0e0e'
+          }
+        }
+      }
     };
   </script>
   <style>
-    /* Loading screen animation */
+    /* Loading spinner */
     #loader {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0b0b0b;
+      inset: 0;
+      background: #0e0e0e;
+      z-index: 9999;
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 9999;
     }
-    .dot {
-      width: 12px;
-      height: 12px;
-      background: #ff9c3f;
+    #loader span {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #ff9c3f;
+      border-top-color: transparent;
       border-radius: 50%;
-      margin: 0 6px;
-      animation: bounce 0.6s infinite alternate;
+      animation: spin 1s linear infinite;
     }
-    .dot:nth-child(2) { animation-delay: 0.2s; }
-    .dot:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes bounce {
-      from { transform: translateY(0); }
-      to { transform: translateY(-12px); }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
+<body class="bg-dark text-white font-sans">
 
-  <!-- Loading screen -->
-  <div id="loader">
-    <div class="flex space-x-2">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-    </div>
-  </div>
+  <!-- Loading Screen -->
+  <div id="loader"><span></span></div>
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+    });
+  </script>
 
   <!-- Navbar -->
-  <header class="bg-dark text-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center p-4 px-6">
-      <span class="text-2xl font-bold text-brand">GameSetup</span>
-      <button id="menuBtn" class="md:hidden text-brand focus:outline-none">
-        ☰
-      </button>
+  <header class="sticky top-0 bg-black/90 backdrop-blur-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
+      <span class="text-xl font-bold text-brand">GameSetup</span>
       <nav class="hidden md:flex space-x-6 text-sm uppercase">
         <a href="index.html" class="text-brand font-semibold">Home</a>
-        <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
+        <a href="vps.html" class="hover:text-brand transition">VPS</a>
         <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
         <a href="bots.html" class="hover:text-brand transition">Bots</a>
-        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
         <a href="websites.html" class="hover:text-brand transition">Websites</a>
+        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
         <a href="domains.html" class="hover:text-brand transition">Domains</a>
         <a href="contact.html" class="hover:text-brand transition">Contact</a>
       </nav>
+      <button id="menuToggle" class="md:hidden text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden flex-col space-y-3 px-6 pb-4">
-      <a href="index.html" class="text-brand">Home</a>
-      <a href="vps.html">VPS Plans</a>
-      <a href="pterodactyl.html">Pterodactyl</a>
-      <a href="bots.html">Bots</a>
-      <a href="hosting.html">Full Setup</a>
-      <a href="websites.html">Websites</a>
-      <a href="domains.html">Domains</a>
-      <a href="contact.html">Contact</a>
+    <div id="mobileMenu" class="md:hidden px-4 pb-4 hidden flex-col space-y-2 text-sm uppercase">
+      <a href="index.html" class="text-brand font-semibold">Home</a>
+      <a href="vps.html" class="hover:text-brand transition">VPS</a>
+      <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
+      <a href="bots.html" class="hover:text-brand transition">Bots</a>
+      <a href="websites.html" class="hover:text-brand transition">Websites</a>
+      <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
+      <a href="domains.html" class="hover:text-brand transition">Domains</a>
+      <a href="contact.html" class="hover:text-brand transition">Contact</a>
     </div>
   </header>
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+  </script>
 
   <!-- Hero Section -->
-  <section class="text-center pt-24 px-6">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Game Hosting & Setup Services</h1>
-    <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-6">
-      VPS, Hosting Panel, Discord Bots & Websites — All in One.
+  <section class="text-center py-24 px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">We Set It Up So You Can Game</h1>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+      VPS, Pterodactyl Panel, Discord Bots, Websites — We handle the setup so you don't have to.
     </p>
-    <a href="https://discord.gg/cBhhAnzeks" target="_blank"
-       class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition">
-       Join Our Discord
-    </a>
-  </section>
-
-  <!-- Highlights -->
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto py-20 px-6">
-    <div class="bg-dark border border-brand/20 p-6 rounded-xl text-center">
-      <h3 class="text-xl font-bold text-brand mb-2">VPS & Hosting</h3>
-      <p class="text-gray-300">Affordable plans with fast delivery, perfect for Minecraft, FiveM, and other games.</p>
-    </div>
-    <div class="bg-dark border border-brand/20 p-6 rounded-xl text-center">
-      <h3 class="text-xl font-bold text-brand mb-2">Discord Bots</h3>
-      <p class="text-gray-300">We build powerful bots — moderation, economy, slash commands & more.</p>
-    </div>
-    <div class="bg-dark border border-brand/20 p-6 rounded-xl text-center">
-      <h3 class="text-xl font-bold text-brand mb-2">Full Setup</h3>
-      <p class="text-gray-300">From panel to bots to websites — we handle your entire hosting brand setup.</p>
+    <div class="mt-8">
+      <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+        class="bg-brand text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+        Order via Discord
+      </a>
     </div>
   </section>
 
-  <!-- Trust Note -->
-  <section class="text-center pb-10 px-6">
-    <p class="text-gray-400 text-sm">Trusted + Affordable. Payments via bKash, Nagad, and Crypto. Trusted exchanger available for international users.</p>
+  <!-- Services Preview -->
+  <section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-4 pb-24">
+    <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
+      <h2 class="text-xl font-bold text-brand mb-2">💻 VPS Setup</h2>
+      <p class="text-gray-300 text-sm">We provide fast, budget-friendly VPS with everything pre-installed.</p>
+    </div>
+    <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
+      <h2 class="text-xl font-bold text-brand mb-2">⚙️ Pterodactyl Panel</h2>
+      <p class="text-gray-300 text-sm">Game panel installed, secured, themed and branded for you.</p>
+    </div>
+    <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
+      <h2 class="text-xl font-bold text-brand mb-2">🤖 Discord Bots</h2>
+      <p class="text-gray-300 text-sm">Custom bots with moderation, logging, music & more — coded or prefab.</p>
+    </div>
+    <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
+      <h2 class="text-xl font-bold text-brand mb-2">🌐 Website Setup</h2>
+      <p class="text-gray-300 text-sm">Landing pages, portfolios, panels — we build and host it for you.</p>
+    </div>
+    <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
+      <h2 class="text-xl font-bold text-brand mb-2">🧩 Full Hosting</h2>
+      <p class="text-gray-300 text-sm">Need the full package? Get it all pre-installed and ready to sell.</p>
+    </div>
+    <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl hover:scale-105 transition">
+      <h2 class="text-xl font-bold text-brand mb-2">🌍 Domains</h2>
+      <p class="text-gray-300 text-sm">Get premium or free domains (.com, .xyz, .gg, .tk, .dev, .play...)</p>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-gray-500 py-6 border-t border-gray-800">
-    <p>&copy; 2025 GameSetup. All rights reserved.</p>
+  <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800">
+    &copy; 2025 GameSetup. All rights reserved.
   </footer>
-
-  <script>
-    // Loading screen removal
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      if (loader) loader.style.display = 'none';
-    });
-
-    // Mobile menu toggle
-    document.getElementById("menuBtn").addEventListener("click", () => {
-      const menu = document.getElementById("mobileMenu");
-      menu.classList.toggle("hidden");
-    });
-  </script>
 </body>
 </html>
