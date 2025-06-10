@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Discord Bots — GameSetup</title>
-  <meta name="description" content="Custom Discord bots with moderation, economy, slash commands & more. Made for your community or server brand." />
+  <meta name="description" content="We offer custom admin and branding bots for Discord servers. Choose from simple to advanced features." />
   <meta name="theme-color" content="#ff9c3f" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -19,52 +19,22 @@
       }
     };
   </script>
-  <style>
-    #loader {
-      position: fixed;
-      inset: 0;
-      background: #0e0e0e;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #loader span {
-      width: 40px;
-      height: 40px;
-      border: 4px solid #ff9c3f;
-      border-top-color: transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-  </style>
 </head>
 <body class="bg-dark text-white font-sans">
 
-  <!-- Loading -->
-  <div id="loader"><span></span></div>
-  <script>
-    window.addEventListener("load", () => {
-      document.getElementById("loader").style.display = "none";
-    });
-  </script>
-
   <!-- Navbar -->
-  <header class="sticky top-0 bg-black/90 backdrop-blur-md z-50">
+  <header class="sticky top-0 bg-black/90 backdrop-blur-md z-50 shadow-lg">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
       <span class="text-xl font-bold text-brand">GameSetup</span>
-      <nav class="hidden md:flex space-x-6 text-sm uppercase">
-        <a href="index.html" class="hover:text-brand transition">Home</a>
-        <a href="vps.html" class="hover:text-brand transition">VPS</a>
-        <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
-        <a href="bots.html" class="text-brand font-semibold">Bots</a>
-        <a href="websites.html" class="hover:text-brand transition">Websites</a>
-        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
-        <a href="domains.html" class="hover:text-brand transition">Domains</a>
-        <a href="contact.html" class="hover:text-brand transition">Contact</a>
+      <nav class="hidden md:flex space-x-3 text-sm">
+        <a href="index.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Home</a>
+        <a href="vps.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">VPS</a>
+        <a href="pterodactyl.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Pterodactyl</a>
+        <a href="bots.html" class="bg-brand text-black px-4 py-2 rounded-full font-semibold">Bots</a>
+        <a href="websites.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Websites</a>
+        <a href="hosting.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Full Setup</a>
+        <a href="domains.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full hover:bg-brand hover:text-black transition">Domains</a>
+        <a href="contact.html" class="bg-brand text-black px-4 py-2 rounded-full font-semibold hover:opacity-90 transition">Contact</a>
       </nav>
       <button id="menuToggle" class="md:hidden text-white">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
@@ -74,74 +44,87 @@
         </svg>
       </button>
     </div>
-    <div id="mobileMenu" class="md:hidden px-4 pb-4 hidden flex-col space-y-2 text-sm uppercase">
-      <a href="index.html" class="hover:text-brand transition">Home</a>
-      <a href="vps.html" class="hover:text-brand transition">VPS</a>
-      <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
-      <a href="bots.html" class="text-brand font-semibold">Bots</a>
-      <a href="websites.html" class="hover:text-brand transition">Websites</a>
-      <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
-      <a href="domains.html" class="hover:text-brand transition">Domains</a>
-      <a href="contact.html" class="hover:text-brand transition">Contact</a>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden px-4 pb-4 hidden flex-col space-y-3">
+      <a href="index.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Home</a>
+      <a href="vps.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">VPS</a>
+      <a href="pterodactyl.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Pterodactyl</a>
+      <a href="bots.html" class="bg-brand text-black px-4 py-2 rounded-full font-semibold block text-center">Bots</a>
+      <a href="websites.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Websites</a>
+      <a href="hosting.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Full Setup</a>
+      <a href="domains.html" class="bg-black border border-brand text-brand px-4 py-2 rounded-full block text-center">Domains</a>
+      <a href="contact.html" class="bg-brand text-black px-4 py-2 rounded-full font-semibold block text-center">Contact</a>
     </div>
   </header>
+
   <script>
     document.getElementById("menuToggle").addEventListener("click", () => {
       document.getElementById("mobileMenu").classList.toggle("hidden");
     });
   </script>
 
-  <!-- Bot Plans -->
+  <!-- Discord Bot Plans -->
   <section class="text-center py-20 px-4">
     <h1 class="text-4xl md:text-5xl font-bold mb-4">Discord Bot Plans</h1>
     <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
-      We build advanced, custom Discord bots — moderation, commands, systems and more.
+      Choose from simple branding bots to full admin bots for your community or hosting panel.
     </p>
 
-    <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+      <!-- Branding Bot -->
       <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl text-left">
-        <h2 class="text-xl font-bold text-brand mb-2">Starter</h2>
-        <ul class="text-sm text-gray-300 mb-4 space-y-1">
-          <li>• Slash Commands</li>
-          <li>• Welcome + Leave</li>
-          <li>• Moderation</li>
-          <li>• Embed + Buttons</li>
+        <h2 class="text-xl font-bold text-brand mb-2">Branding Bot</h2>
+        <p class="text-sm text-gray-300 mb-3">৳300 / $3</p>
+        <ul class="text-sm text-gray-300 space-y-1 mb-4">
+          <li>• Online 24/7</li>
+          <li>• Custom name & avatar</li>
+          <li>• Embed messages</li>
+          <li>• Auto role / welcome</li>
+          <li>• Hosting info / links</li>
         </ul>
-        <p class="text-brand font-bold text-lg">৳350 / $4</p>
+        <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+          class="bg-brand text-black px-4 py-2 rounded-full font-semibold hover:scale-105 transition inline-block">
+          Order Now
+        </a>
       </div>
 
+      <!-- Admin Bot -->
       <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl text-left">
-        <h2 class="text-xl font-bold text-brand mb-2">Advanced</h2>
-        <ul class="text-sm text-gray-300 mb-4 space-y-1">
-          <li>• All in Starter</li>
-          <li>• Economy / Levels</li>
-          <li>• Tickets / Giveaways</li>
-          <li>• Music / Custom Prefix</li>
+        <h2 class="text-xl font-bold text-brand mb-2">Admin Bot</h2>
+        <p class="text-sm text-gray-300 mb-3">৳650 / $7</p>
+        <ul class="text-sm text-gray-300 space-y-1 mb-4">
+          <li>• Branding Bot features</li>
+          <li>• Panel status command</li>
+          <li>• Restart wings/daemon</li>
+          <li>• Admin-only controls</li>
+          <li>• Add/remove client roles</li>
         </ul>
-        <p class="text-brand font-bold text-lg">৳650 / $7</p>
+        <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+          class="bg-brand text-black px-4 py-2 rounded-full font-semibold hover:scale-105 transition inline-block">
+          Order Now
+        </a>
       </div>
 
+      <!-- Advanced Bot -->
       <div class="bg-[#141414] border border-brand/20 p-6 rounded-xl text-left">
-        <h2 class="text-xl font-bold text-brand mb-2">Premium Brand Bot</h2>
-        <ul class="text-sm text-gray-300 mb-4 space-y-1">
-          <li>• All Advanced Features</li>
-          <li>• Branding + Logo</li>
-          <li>• Dashboard Panel</li>
-          <li>• Hosting Included</li>
+        <h2 class="text-xl font-bold text-brand mb-2">Advanced Bot</h2>
+        <p class="text-sm text-gray-300 mb-3">৳1500+ / $15+</p>
+        <ul class="text-sm text-gray-300 space-y-1 mb-4">
+          <li>• Admin Bot features</li>
+          <li>• Auto panel creation</li>
+          <li>• Full ticket system</li>
+          <li>• Payment logging</li>
+          <li>• Full custom commands</li>
         </ul>
-        <p class="text-brand font-bold text-lg">৳1200+ / $13+</p>
+        <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+          class="bg-brand text-black px-4 py-2 rounded-full font-semibold hover:scale-105 transition inline-block">
+          Contact First
+        </a>
       </div>
     </div>
 
-    <p class="text-sm text-gray-400 mt-10">
-      All bots are built with care. You’ll receive ZIP + host ready + setup guide.
-    </p>
-
-    <div class="mt-6">
-      <a href="https://discord.gg/cBhhAnzeks" target="_blank"
-        class="bg-brand text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
-        Order via Discord
-      </a>
+    <div class="mt-10 text-sm text-gray-400">
+      <p>We offer Node.js, Python or Discord.js v14 bots. Host it yourself or ask us.</p>
     </div>
   </section>
 
