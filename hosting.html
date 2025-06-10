@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Hosting Setup — GameSetup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff9c3f',
+              brandHover: '#ff7a1a',
+              dark: '#0b0b0b',
+              darker: '#1a1a1a',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
+    <!-- Navbar -->
+    <header class="flex justify-between items-center p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
+      <div class="flex items-center space-x-2">
+        <img src="/assets/logo.png" alt="GameSetup Logo" class="h-10 w-auto" />
+        <span class="text-2xl font-bold text-brand">GameSetup</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm uppercase">
+        <a href="index.html" class="hover:text-brand transition">Home</a>
+        <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
+        <a href="pterodactyl.html" class="hover:text-brand transition">Pterodactyl</a>
+        <a href="bots.html" class="hover:text-brand transition">Bots</a>
+        <a href="hosting.html" class="text-brand font-semibold">Full Setup</a>
+        <a href="websites.html" class="hover:text-brand transition">Websites</a>
+        <a href="contact.html" class="hover:text-brand transition">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="text-center pt-20 px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Full Hosting Setup</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">We build your entire hosting business — from server to website — all in one place.</p>
+    </section>
+
+    <!-- What's Included -->
+    <section class="max-w-4xl mx-auto py-16 px-4 grid gap-8">
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl">
+        <h2 class="text-2xl font-semibold text-brand mb-2">🛠️ What’s Included:</h2>
+        <ul class="text-gray-300 space-y-2 list-disc list-inside">
+          <li>Pterodactyl Panel Setup (with theme & extensions)</li>
+          <li>VPS Setup & Optimization</li>
+          <li>Discord Bot Integration</li>
+          <li>Custom Website Development</li>
+          <li>Free Subdomain or Domain Help</li>
+          <li>Bot + Panel Hosting Support</li>
+        </ul>
+      </div>
+
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl">
+        <h2 class="text-xl font-semibold text-brand mb-2">💰 Pricing:</h2>
+        <p class="text-gray-300">Full Hosting Setup starts at <span class="text-white font-bold">৳6,999 – ৳11,999+</span> depending on your needs.</p>
+        <p class="text-gray-400 text-sm mt-2 italic">Let us know your full plan and we’ll give you a custom quote.</p>
+      </div>
+
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl">
+        <h2 class="text-xl font-semibold text-brand mb-2">📦 Requirements:</h2>
+        <p class="text-gray-300">You’ll need a VPS or we can help you buy and set it up.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="text-center pb-10">
+      <a href="https://discord.gg/cBhhAnzeks" target="_blank"
+         class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition-all">
+         Order Full Setup via Discord
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 py-6 border-t border-gray-800">
+      <p>&copy; 2025 GameSetup. All rights reserved.</p>
+      <p class="text-sm mt-1">Trusted + Affordable</p>
+    </footer>
+  </body>
+</html>
