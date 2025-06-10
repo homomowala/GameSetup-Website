@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pterodactyl Setup — GameSetup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#ff9c3f',
+              brandHover: '#ff7a1a',
+              dark: '#0b0b0b',
+              darker: '#1a1a1a',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-dark to-darker text-white font-sans">
+    <!-- Navbar -->
+    <header class="flex justify-between items-center p-4 px-6 bg-dark shadow-md sticky top-0 z-50">
+      <div class="flex items-center space-x-2">
+        <img src="/assets/logo.png" alt="GameSetup Logo" class="h-10 w-auto" />
+        <span class="text-2xl font-bold text-brand">GameSetup</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm uppercase">
+        <a href="index.html" class="hover:text-brand transition">Home</a>
+        <a href="vps.html" class="hover:text-brand transition">VPS Plans</a>
+        <a href="pterodactyl.html" class="text-brand font-semibold">Pterodactyl</a>
+        <a href="bots.html" class="hover:text-brand transition">Bots</a>
+        <a href="hosting.html" class="hover:text-brand transition">Full Setup</a>
+        <a href="websites.html" class="hover:text-brand transition">Websites</a>
+        <a href="contact.html" class="hover:text-brand transition">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="text-center pt-20 px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Pterodactyl Panel Setup</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">We install and configure Pterodactyl with themes, extensions, and full support — start hosting your servers like a pro.</p>
+    </section>
+
+    <!-- Setup Info -->
+    <section class="max-w-5xl mx-auto py-16 px-4 grid gap-10">
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-brand mb-2">✅ Full Installation</h2>
+        <p class="text-gray-300">We install Pterodactyl Panel from scratch including Wings, SSL, and all configs — on your own VPS or one we help you get.</p>
+      </div>
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-brand mb-2">🎨 Nebula Theme + Addons</h2>
+        <p class="text-gray-300">We apply the Nebula UI theme and popular Pterodactyl addons (file manager, logs, themes, server packs, backups, and more).</p>
+      </div>
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-brand mb-2">⚙️ Server Requirements</h2>
+        <p class="text-gray-300">Minimum: 1GB RAM, 1 vCore, 10GB SSD VPS (we can provide VPS too if needed). Ubuntu 20.04/22.04 is supported.</p>
+      </div>
+      <div class="bg-dark border border-brand/20 p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-brand mb-2">🛠️ Includes VPS Help</h2>
+        <p class="text-gray-300">We help you with VPS setup, hostname config, DNS records, firewall rules, and panel management tips.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="text-center pb-20">
+      <a href="https://discord.gg/cBhhAnzeks" target="_blank" class="bg-brand hover:bg-brandHover text-black px-6 py-3 rounded-full font-semibold shadow-lg transition-all">Order Setup on Discord</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 py-6 border-t border-gray-800">
+      <p>&copy; 2025 GameSetup. All rights reserved.</p>
+      <p class="text-sm mt-1">Trusted + Affordable</p>
+    </footer>
+  </body>
+</html>
